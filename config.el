@@ -2,6 +2,9 @@
 
 ;; Place your private configuration here
 
+;; Theme
+(load-theme 'doom-tomorrow-night t)
+
 ;; Assign typescript-mode to .tsx files
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . tide-mode))
 
