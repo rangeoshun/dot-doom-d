@@ -1,8 +1,9 @@
 ;; -*- no-byte-compile: t; -*-
 ;;; .doom.d/packages.el
 
-;;; Examples:
-;; (package! some-package)
-;; (package! another-package :recipe (:host github :repo "username/repo"))
-;; (package! builtin-package :disable t)
+(package! mmm-mode)
 (package! prettier-js)
+(package! tide)
+(package! typescript-mode)
+(package! web-mode)
+(package! graphql-mode)
