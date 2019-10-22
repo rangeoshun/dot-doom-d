@@ -65,7 +65,7 @@
 (mmm-add-classes
   '((mmm-graphql-mode
     :submode graphql-mode
-    :front "graphql`" ;; Add additional aliases like `gql` if needed
+    :front "gr?a?p?h?ql`\n" ;; Add additional aliases like `gql` if needed
     :back "`;")))
 
 (mmm-add-mode-ext-class 'typescript-mode nil 'mmm-graphql-mode)
