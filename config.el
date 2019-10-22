@@ -8,13 +8,14 @@
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 (setq-default js-indent-level 2)
+(setq-default typescript-indent-level 2)
 
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
 (add-hook 'json-mode-hook 'prettier-js-mode)
 (add-hook 'tide-mode-hook 'prettier-js-mode)
 (add-hook 'css-mode-hook 'prettier-js-mode)
-(add-hook 'rjsx-mode-hook 'prettier-js-mode)
+(add-hook 'typescript-mode-hook 'prettier-js-mode)
 
 ;; Connfigure groovy-mode
 (add-hook 'groovy-mode-hook
