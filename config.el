@@ -78,3 +78,6 @@
     :submode web-mode)))
 
 (mmm-add-mode-ext-class 'typescript-mode nil 'mmm-jsx-mode)
+
+;; Assign typescript-mode to .tsx files
+(add-to-list 'auto-mode-alist '("\\.slim\\'" . slim-mode))

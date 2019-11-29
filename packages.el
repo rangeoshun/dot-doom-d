@@ -8,3 +8,4 @@
 (package! web-mode)
 (package! graphql-mode)
 (package! company)
+(package! slim-mode)
