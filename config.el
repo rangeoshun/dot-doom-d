@@ -58,7 +58,7 @@
 (mmm-add-classes
   '((mmm-styled-mode
     :submode css-mode
-    :front "[a-pr-zA-PR-Z0-9\(\)]?[a-km-zA-KM-Z0-9\(\)]+`\n"
+    :front "[a-pr-zA-PR-Z0-9\(\)]?[a-km-zA-KM-Z0-9\(\)ul]+`\n"
     :back "`;")))
 
 (mmm-add-mode-ext-class 'typescript-mode nil 'mmm-styled-mode)
