@@ -81,5 +81,11 @@
 
 (mmm-add-mode-ext-class 'typescript-mode nil 'mmm-jsx-mode)
 
+(defun mmm-reapply ()
+  (mmm-mode)
+  (mmm-mode))
+
+(add-hook 'after-save-hook 'mmm-reapply)
+
 ;; Assign slim-mode to .slim files
 (add-to-list 'auto-mode-alist '("\\.slim\\'" . slim-mode))
