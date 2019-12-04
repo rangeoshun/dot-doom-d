@@ -9,6 +9,8 @@
 (setq-default indent-tabs-mode nil)
 (setq-default js-indent-level 2)
 (setq-default typescript-indent-level 2)
+(setq-default web-mode-indent-style 2)
+(setq-default web-mode-code-indent-offset 2)
 
 (add-hook 'js2-mode-hook 'prettier-js-mode)
 (add-hook 'web-mode-hook 'prettier-js-mode)
