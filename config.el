@@ -63,14 +63,6 @@
 
 (mmm-add-mode-ext-class 'typescript-mode nil 'mmm-styled-mode)
 
-(mmm-add-classes
-  '((mmm-styled-interpoled-mode
-    :submode typescript-mode
-    :front "${"
-    :back "${.*}")))
-
-(mmm-add-mode-ext-class 'mmm-styled-mode nil 'mmm-styled-interpoled-mode)
-
 ;; Add submodule for graphql blocks
 (mmm-add-classes
   '((mmm-graphql-mode
