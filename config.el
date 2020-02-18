@@ -89,3 +89,6 @@
 
 ;; Assign slim-mode to .slim files
 (add-to-list 'auto-mode-alist '("\\.slim\\'" . slim-mode))
+
+;; Gherkin feature support
+(add-to-list 'auto-mode-alist '("\\.feature\\'" . feature-mode))
