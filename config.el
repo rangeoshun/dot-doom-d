@@ -27,6 +27,7 @@
 
 ;; Assign typescript-mode to .tsx files
 (add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 
 (defun setup-tide-mode ()
   (interactive)
