@@ -52,7 +52,7 @@
 
 ;; Create submodules for multiple major modes
 (require 'mmm-auto)
-(setq mmm-global-mode 'maybe)
+(setq mmm-global-mode t)
 (setq mmm-submode-decoration-level 0) ;; Turn off background highlight
 
 ;; Add css mode for CSS in JS blocks
