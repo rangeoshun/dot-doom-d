@@ -46,10 +46,6 @@
 
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
-;; Assign typescript-mode to .tsx files
-(add-to-list 'auto-mode-alist '("\\.tsx\\'" . typescript-mode))
-(add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
-
 ;; Create submodules for multiple major modes
 (require 'mmm-auto)
 (setq mmm-global-mode t)
