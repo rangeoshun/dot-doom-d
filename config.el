@@ -5,29 +5,6 @@
 ;; Theme
 (load-theme 'doom-tomorrow-night t)
 
-;; (define-hostmode poly-web-hostmode
-;;   :mode 'web-mode)
-
-;; (define-innermode poly-web-graphql-innermode
-;;   :mode 'graphql-mode
-;;   :head-matcher "gr?a?p?h?ql`\n"
-;;   :tail-matcher "`;"
-;;   :head-mode 'host
-;;   :tail-mode 'host)
-
-;; (define-innermode poly-web-styled-innermode
-;;   :mode 'css-mode
-;;   :head-matcher "[a-pr-zA-PR-Z0-9\(\)_]?[a-km-zA-KM-Z0-9\(\)<>(ul)_]+`\n"
-;;   :tail-matcher "`;"
-;;   :head-mode 'host
-;;   :tail-mode 'host)
-
-;; (define-polymode poly-web-mode
-;;   :hostmode 'poly-web-hostmode
-;;   :innermodes '(poly-web-graphql-innermode
-;;                 poly-web-styled-innermode))
-;; (add-hook 'poly-web-mode-hook 'prettier-js-mode)
-
 (setq-default tab-width 2)
 (setq-default indent-tabs-mode nil)
 (setq-default js-indent-level 2)
