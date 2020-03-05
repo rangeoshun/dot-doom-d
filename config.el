@@ -27,7 +27,6 @@
   (setq flycheck-check-syntax-automatically '(save mode-enabled))
   ;; aligns annotation to the right hand side
   (eldoc-mode +1)
-  (tide-format-before-save )
   (tide-hl-identifier-mode +1)
   ;; company is an optional dependency. You have to
   ;; install it separately via package-install
@@ -72,7 +71,7 @@
 ;; Add JSX submodule, because typescript-mode is not that great at it
 (mmm-add-classes
   '((mmm-jsx-mode
-     :front "[=(]\n?\s*<"
+     :front "\\(=\s\\|(\n\s*\\)<"
      :front-offset -1
      :back ">\n?\s*)"
      :back-offset 1
@@ -82,7 +81,8 @@
 
 (defun mmm-reapply ()
   (mmm-mode)
-  (mmm-mode))
+  (mmm-mode)
+  (tide-setup))
 
 (add-hook 'after-save-hook
           (lambda ()
