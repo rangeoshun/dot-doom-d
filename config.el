@@ -71,9 +71,9 @@
 ;; Add JSX submodule, because typescript-mode is not that great at it
 (mmm-add-classes
   '((mmm-jsx-mode
-     :front "\\(=\s\\|(\n\s*\\)<"
+     :front "\\(return\s\\|n\s\\|(\n\s*\\)<"
      :front-offset -1
-     :back ">\n?\s*)"
+     :back ">\n?\s*)?;"
      :back-offset 1
      :submode web-mode)))
 
