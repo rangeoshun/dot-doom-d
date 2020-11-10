@@ -3,7 +3,7 @@
 ;; Place your private configuration here
 
 ;; Theme
-(load-theme 'doom-tomorrow-night t)
+(load-theme 'doom-tomorrow-day t)
 
 (setq doom-font (font-spec :family "Fira Code Light" :size 13))
 
@@ -32,7 +32,7 @@
 ;; Create submodules for multiple major modes
 (require 'mmm-mode)
 (setq mmm-global-mode t)
-(setq mmm-submode-decoration-level 1) ;; Turn off background highlight
+(setq mmm-submode-decoration-level 0) ;; Turn off background highlight
 (setq mmm-parse-when-idle t)
 
 ;; Add css mode for CSS in JS blocks
@@ -40,6 +40,7 @@
   '((mmm-styled-mode
     :submode css-mode
     :front "\\(styled\\|css\\)[.()<>[:alnum:]]?+`"
+    :front-offset 1
     :back "`;")))
 
 (mmm-add-mode-ext-class 'typescript-mode nil 'mmm-styled-mode)
@@ -50,6 +51,25 @@
     :submode graphql-mode
     :front "gr?a?p?h?ql`" ;; Add additional aliases like `gql` if needed
     :back "`;")))
+
+;; Ruby mmms
+(mmm-add-classes
+  '((mmm-gql-ruby-mode
+    :submode graphql-mode
+    :front "<<-GQL"
+    :back "\n\s*GQL")))
+
+(mmm-add-mode-ext-class 'ruby-mode nil 'mmm-gql-ruby-mode)
+
+;; Ruby mmms
+(mmm-add-classes
+  '((mmm-sql-ruby-mode
+    :submode sql-mode
+    :front "<<-SQL.*\n"
+    :back "\n\s*SQL"
+    :back-offset 1)))
+
+(mmm-add-mode-ext-class 'ruby-mode nil 'mmm-sql-ruby-mode)
 
 (mmm-add-mode-ext-class 'typescript-mode nil 'mmm-graphql-mode)
 
